@@ -1,0 +1,20 @@
+@model MathOperation
+
+
+<form asp-controller="Conversion" asp-action="DoConversion" method="POST">
+  Left Value<br>
+  <input type="text" asp-for="@Model.LeftOperand">
+  <br>
+  Right Value:<br>
+  <input type="text" asp-for="@Model.RightOperand">
+  <br><br>
+  Operator:<br>
+  <select asp-for="@Model.Operator">
+  <option value="Addition">Addition</option>
+  <option value="Subtraction">Subtraction</option>
+  <option value="Multiplication">Multiplication</option>
+  <option value="Division">Division</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
